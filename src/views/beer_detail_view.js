@@ -12,14 +12,14 @@ BeerDetailView.prototype.createBeerDetail = function (beer) {
   name.textContent = beer.name;
   beerDetail.appendChild(name);
 
-// Creates a list ) i.e data.1st item
+// Creates a list 'holder'
   const detailsList = document.createElement('ul');
 
-// populates that list:
+// populates that list with other info from original data (i.e tag & description)
   const tagline = this.createDetailListItem('Tagline', beer.tagline);
   detailsList.appendChild(tagline);
 
-  const description = this.createDetailListItem('Description', beer.description)
+  const description = this.createDetailListItem('Description', beer.description);
   detailsList.appendChild(description);
 
 // publishes this list

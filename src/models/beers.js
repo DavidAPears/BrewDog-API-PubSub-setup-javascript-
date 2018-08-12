@@ -2,9 +2,7 @@ const RequestHelper = require('../helpers/request_helper.js');
 const PubSub = require('../helpers/pub_sub.js');
 
 const Beers = function () {
-  this.beersData = [];
-  this.names = [];
-  this.data = [];
+  this.data = null;
 }
 
 // Get request, returns all data from API (all beers)
@@ -17,12 +15,12 @@ const Beers = function () {
 // }
 
 // Get request, returns all data from API (all beers)
-Beers.prototype.getData = function (beer_name) {
+Beers.prototype.getData = function () {
  const url = `https://api.punkapi.com/v2/beers`;
  const request = new Request(url);
  request.get()
    .then((data) => {
-     this.data = data
+     this.data = data.message
      PubSub.publish('Beers:beers-ready', this.data)
    })
    .catch((message) => {
