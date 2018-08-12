@@ -1,0 +1,30 @@
+body {
+  background-image: url('../images/blackdog.jpg');no-repeat center center fixed;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+font-family: 'Dosis', sans-serif;
+font-weight: bolder;
+color: white;
+/* color: #3EAF11; */
+/* color: #0FC4A6; */
+text-align: center
+}
+
+img {
+  height: 25vh;
+  width: 50vh ;
+  border: white;
+  text-align: center
+  padding:1px;
+   border:1px solid #0E1F7D;
+   background-color:#ff0;
+   transition: all 0.3s ease-in-out 0s;
+ }
+ img:hover
+{
+    cursor: default;
+    transform: rotate(360deg);
+    transition: all 0.3s ease-in-out 0s;
+}
