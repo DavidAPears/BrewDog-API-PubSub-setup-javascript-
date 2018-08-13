@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const beerFormView = new BeerFormView(beerForm);
   beerFormView.bindEvents();
 
+// The below returns/publishes ALL BEERS:
   const listContainer = document.querySelector('#beer-list');
   const beerListView = new BeerListView(listContainer);
   beerListView.bindEvents();

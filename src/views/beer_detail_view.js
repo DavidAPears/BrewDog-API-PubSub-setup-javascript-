@@ -8,21 +8,24 @@ BeerDetailView.prototype.createBeerDetail = function (beer) {
   beerDetail.classList.add('beer-detail');
 
 // Creates the main header populated with main piece of data (i.e data.name)
-  const name = document.createElement('h3');
+  const name = document.createElement('h2');
   name.textContent = beer.name;
   beerDetail.appendChild(name);
 
 // Creates a list 'holder'
-  const detailsList = document.createElement('ul');
+  const detailsList = document.createElement('div');
 
 // populates that list with other info from original data (i.e tag & description)
-  const tagline = this.createDetailListItem('Tagline', beer.tagline);
+  const tagline = this.createDetailListItem(beer.tagline);
+  tagline.classList.add('tagline');
   detailsList.appendChild(tagline);
 
   const description = this.createDetailListItem('Description', beer.description);
+  description.classList.add('description');
   detailsList.appendChild(description);
 
-  const food_pairing = this.createDetailListItem('Food Pairing', beer.food_pairing);
+  const food_pairing = this.createDetailListItem('Try with: ', beer.food_pairing);
+  food_pairing.classList.add('food_pairing');
   detailsList.appendChild(food_pairing);
 
   const image_url = this.createImage(beer.image_url);
@@ -41,23 +44,12 @@ BeerDetailView.prototype.createBeerDetail = function (beer) {
   };
 
 
-// IMAGE:
-
-  // beer.forEach((beer) => {
-  //   const img = this.createImage(beer);
-  //   this.container.appendChild(img);
-  // });
-// }
-
+// IMAGE (NB: Ones provided by BrewDog are not great tbh)
 BeerDetailView.prototype.createImage = function (image) {
   const img = document.createElement('img');
   img.src = image;
   return img;
 }
-
-
-
-
 
 
 module.exports = BeerDetailView;

@@ -6,19 +6,45 @@ body {
 -o-background-size: cover;
 background-size: cover;
 font-family: 'Dosis', sans-serif;
-font-weight: bolder;
+/* font-weight: bold; */
 color: #FF9700;
 /* color: #3EAF11; */
 /* color: #0FC4A6; */
-text-align: center
+text-align: center;
 }
 
+div {
+color: #FF9700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 20px;
+}
+
+h2 {
+color: white;
+}
+
+
 img {
-  height: 35vh;
-  width: 10vh ;
+  height: 30vh;
+  width: 7.5vh ;
    background-color: black;
  }
 
- /* #beer-list{
-   background-image: url('../images/blackdog.jpg');
- } */
+ #beer-list{
+   background-color: black;
+ }
+
+ .description {
+   color: white;
+ }
+
+ .tagline{
+   color: #FF9700;
+ }
+
+ .food_pairing {
+   color: #FF9700;
+ }
