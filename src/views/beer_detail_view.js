@@ -25,16 +25,39 @@ BeerDetailView.prototype.createBeerDetail = function (beer) {
   const food_pairing = this.createDetailListItem('Food Pairing', beer.food_pairing);
   detailsList.appendChild(food_pairing);
 
-// publishes this list
-  beerDetail.appendChild(detailsList);
-  return beerDetail;
-};
+  const image_url = this.createImage(beer.image_url);
+  detailsList.appendChild(image_url);
 
-BeerDetailView.prototype.createDetailListItem = function (label, property) {
-  const element = document.createElement('li');
-  element.textContent = `${label}: ${property}`;
-  return element;
-};
+
+  // publishes this list
+    beerDetail.appendChild(detailsList);
+    return beerDetail;
+  };
+
+  BeerDetailView.prototype.createDetailListItem = function (label, property) {
+    const element = document.createElement('li');
+    element.textContent = `${label}: ${property}`;
+    return element;
+  };
+
+
+// IMAGE:
+
+  // beer.forEach((beer) => {
+  //   const img = this.createImage(beer);
+  //   this.container.appendChild(img);
+  // });
+// }
+
+BeerDetailView.prototype.createImage = function (image) {
+  const img = document.createElement('img');
+  img.src = image;
+  return img;
+}
+
+
+
+
 
 
 module.exports = BeerDetailView;
