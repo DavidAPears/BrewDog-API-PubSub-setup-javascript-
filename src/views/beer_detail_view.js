@@ -35,7 +35,7 @@ BeerDetailView.prototype.createBeerDetail = function (beer) {
   };
 
   BeerDetailView.prototype.createDetailListItem = function (label, property) {
-    const element = document.createElement('li');
+    const element = document.createElement('p');
     element.textContent = `${label}: ${property}`;
     return element;
   };
