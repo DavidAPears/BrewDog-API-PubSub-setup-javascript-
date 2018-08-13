@@ -6,10 +6,7 @@ body {
 -o-background-size: cover;
 background-size: cover;
 font-family: 'Dosis', sans-serif;
-/* font-weight: bold; */
 color: #FF9700;
-/* color: #3EAF11; */
-/* color: #0FC4A6; */
 text-align: center;
 }
 
@@ -34,7 +31,7 @@ img {
  }
 
  #beer-list{
-   background-color: black;
+   /* background-color: black; */
  }
 
  .description {
