@@ -1,18 +1,23 @@
-const RequestHelper = function (url) {
+const Request = function (url) {
   this.url = url
 }
 
-RequestHelper.prototype.get = function (onComplete) {
-  const xhr = new XMLHttpRequest();
-  xhr.open('GET', this.url);
-  xhr.addEventListener('load', function() {
-    if(this.status !== 200){
-      return;
-    }
-    const data = JSON.parse(this.responseText);
-    onComplete(data);
-  });
-  xhr.send();
-};
+Request.prototype.get = function (onComplete) {
+ return fetch(this.url)
+   .then((res) => res.json());
+}
 
-module.exports = RequestHelper;
+// Request.prototype.get = function (onComplete) {
+//   const xhr = new XMLHttpRequest();
+//   xhr.open('GET', this.url);
+//   xhr.addEventListener('load', function() {
+//     if(this.status !== 200){
+//       return;
+//     }
+//     const data = JSON.parse(this.responseText);
+//     onComplete(data);
+//   });
+//   xhr.send();
+// };
+
+module.exports = Request;

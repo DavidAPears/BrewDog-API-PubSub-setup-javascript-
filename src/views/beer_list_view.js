@@ -1,12 +1,13 @@
 const PubSub = require('../helpers/pub_sub.js');
 const BeerDetailView = require('./beer_detail_view');
 
-const ListView = function (container) {
+const BeerListView = function (container) {
   this.container = container;
 };
 
 BeerListView.prototype.bindEvents = function () {
   PubSub.subscribe('Beers:beers-ready', (evt) => {
+    console.log(evt);
     this.renderBeerDetailViews(evt.detail);
   });
 };

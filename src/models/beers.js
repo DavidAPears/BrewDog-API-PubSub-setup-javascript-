@@ -1,4 +1,4 @@
-const RequestHelper = require('../helpers/request_helper.js');
+const Request = require('../helpers/request_helper.js');
 const PubSub = require('../helpers/pub_sub.js');
 
 const Beers = function () {
@@ -20,7 +20,7 @@ Beers.prototype.getData = function () {
  const request = new Request(url);
  request.get()
    .then((data) => {
-     this.data = data.message
+     this.data = data
      PubSub.publish('Beers:beers-ready', this.data)
    })
    .catch((message) => {
