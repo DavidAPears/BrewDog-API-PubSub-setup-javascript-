@@ -22,6 +22,9 @@ BeerDetailView.prototype.createBeerDetail = function (beer) {
   const description = this.createDetailListItem('Description', beer.description);
   detailsList.appendChild(description);
 
+  const food_pairing = this.createDetailListItem('Food Pairing', beer.food_pairing);
+  detailsList.appendChild(food_pairing);
+
 // publishes this list
   beerDetail.appendChild(detailsList);
   return beerDetail;

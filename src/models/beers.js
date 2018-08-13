@@ -5,16 +5,8 @@ const Beers = function () {
   this.data = null;
 }
 
-// Get request, returns all data from API (all beers)
 
-// Beers.prototype.getData = function () {
-//   const requestHelper = new RequestHelper('https://api.punkapi.com/v2/beers')  //https://api.punkapi.com/v2/ ??
-//   requestHelper.get((data) => {
-//     PubSub.publish('Beers:beers-ready', data);
-//   });
-// }
-
-// Get request, returns all data from API (all beers)
+// OPTION A 'GETTER': Get request, returns all data from API (all beers)
 Beers.prototype.getData = function () {
  const url = `https://api.punkapi.com/v2/beers`;
  const request = new Request(url);
@@ -27,5 +19,14 @@ Beers.prototype.getData = function () {
      console.error(message);
    });
 }
+
+// OPTION B 'GETTER': Get request, returns all data from API (all beers)
+
+// Beers.prototype.getData = function () {
+//   const requestHelper = new RequestHelper('https://api.punkapi.com/v2/beers')  //https://api.punkapi.com/v2/ ??
+//   requestHelper.get((data) => {
+//     PubSub.publish('Beers:beers-ready', data);
+//   });
+// }
 
 module.exports = Beers;
