@@ -1,3 +1,5 @@
+ // BEER_DETAIL_VIEW: PRESENTS BEERS IN GRIDBOX FORMAT
+
 const BeerDetailView = function () {
 
 }

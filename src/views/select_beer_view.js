@@ -1,3 +1,5 @@
+ // SELECT_BEER_VIEW = BEER DROPDOWN BOX
+
 const PubSub = require('../helpers/pub_sub.js');
 
 const SelectBeerView = function (selectElement) {

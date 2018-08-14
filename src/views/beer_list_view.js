@@ -1,3 +1,6 @@
+// BEER-LIST_VIEW = DISPLAYS LIST OF ALL BEERS
+
+
 const PubSub = require('../helpers/pub_sub.js');
 const BeerDetailView = require('./beer_detail_view.js');
 

@@ -1,3 +1,5 @@
+ // BEER_FORM_VIEW = BEER SEARCH BOX (FUZZY SEARCH)
+
 const PubSub = require('../helpers/pub_sub.js');
 
 const BeerFormView = function (element) {

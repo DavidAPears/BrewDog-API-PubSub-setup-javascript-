@@ -1,3 +1,9 @@
+.header img {
+  float: left;
+  width: 100px;
+  height: 100px;
+  background: black;
+}
 
 body {
   background-image: url('../images/blackdog.jpg');no-repeat center center fixed;
