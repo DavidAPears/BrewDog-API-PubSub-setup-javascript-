@@ -7,7 +7,8 @@ const BeerFormView = function (element) {
 BeerFormView.prototype.bindEvents = function () {
   this.element.addEventListener('submit', (evt) => {
     evt.preventDefault();
-    console.log(evt.target[0].value);
+    // console.log(evt.target[0].value);
+    console.log(evt);
     const beer = evt.target[0].value;
     PubSub.publish('BeerFormView:form-submitted', beer);
     this.element.reset();

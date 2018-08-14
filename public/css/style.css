@@ -5,7 +5,7 @@ body {
 -moz-background-size: cover;
 -o-background-size: cover;
 background-size: cover;
-font-family: 'Dosis', sans-serif;
+font-family: 'Special Elite', cursive;
 color: #FF9700;
 text-align: center;
 }
@@ -45,3 +45,67 @@ img {
  .food_pairing {
    color: #FF9700;
  }
+
+
+
+
+/* Below pertains to the dropdown menu */
+
+.beers {
+  position: relative;
+  font-family: 'Special Elite', cursive;
+  color: pink
+}
+
+.beers select {
+  display: none; /*hide original SELECT element:*/
+}
+
+}
+.beers-selected {
+  background-color: DodgerBlue;
+}
+
+}
+/*style the arrow inside the select element:*/
+.beers-selected:after {
+  position: absolute;
+  content: "";
+  top: 14px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-color: #fff transparent transparent transparent;
+}
+
+.beers-selected.select-arrow-active:after {
+  border-color: transparent transparent #fff transparent;
+  top: 7px;
+}
+
+.beers-items div,.select-selected {
+  color: #ffffff;
+  padding: 8px 16px;
+  border: 1px solid transparent;
+  border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+  cursor: pointer;
+  user-select: none;
+}
+
+.beers-items {
+  position: absolute;
+  background-color: DodgerBlue;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+
+/*hide the items when the select box is closed:*/
+.Beers-hide {
+  display: none;
+}
+.beer-items div:hover, .same-as-selected {
+  background-color: rgba(0, 0, 0, 0.1);
+}

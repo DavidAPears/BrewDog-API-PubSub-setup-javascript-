@@ -1,5 +1,5 @@
 const PubSub = require('../helpers/pub_sub.js');
-const BeerDetailView = require('./beer_detail_view');
+const BeerDetailView = require('./beer_detail_view.js');
 
 const BeerListView = function (container) {
   this.container = container;

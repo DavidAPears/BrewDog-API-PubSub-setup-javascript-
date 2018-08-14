@@ -10,12 +10,12 @@ document.addEventListener('DOMContentLoaded', () => {
   const selectView = new SelectBeerView(selectElement);
   selectView.bindEvents();
 
-// The beow returns a searchbox, where beer can be searched by name
+// The below returns a searchbox, where beer can be searched by name
   const beerForm = document.querySelector('form')
   const beerFormView = new BeerFormView(beerForm);
   beerFormView.bindEvents();
 
-// The below returns/publishes ALL BEERS:
+// The below returns/publishes ALL BEERS in list form under search boxes:
   const listContainer = document.querySelector('#beer-list');
   const beerListView = new BeerListView(listContainer);
   beerListView.bindEvents();
