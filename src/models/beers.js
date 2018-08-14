@@ -42,21 +42,24 @@ Beers.prototype.getBeerByName = function (beer_name) {
 }
 
 // LISTENS for an event in the DROPDOWN (NOT WORKING)
-Beers.prototype.bindEvents = function () {
-  PubSub.subscribe('SelectView:change', (evt) => {
-    selectedIndex = evt.detail;
-    const selectedBeer = this.beers[selectedIndex];
-    PubSub.publish('Beers:selected-beer-ready', selectedBeer);
-  });
-};
+// Beers.prototype.bindEvents = function () {
+//   PubSub.subscribe('SelectView:change', (evt) => {
+//     selectedIndex = evt.detail;
+//     const selectedBeer = this.beers[selectedIndex];
+//     PubSub.publish('Beers:selected-beer-ready', selectedBeer);
+//   });
+// };
 
 
 
-// LISTENS for an event in the 'search' box: 
+// LISTENS for an event in the 'search' box:
 Beers.prototype.bindEvents = function () {
   PubSub.subscribe('BeerFormView:form-submitted', (evt)=>{
     this.getBeerByName(evt.detail)
-  } )
+  })
+  PubSub.subscribe('SelectView:change', (evt) => {
+    this.getBeerByName(evt.detail)
+  })
 };
 
 module.exports = Beers;
