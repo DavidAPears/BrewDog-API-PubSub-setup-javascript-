@@ -18,7 +18,7 @@ BeerDetailView.prototype.createBeerDetail = function (beer) {
   const detailsList = document.createElement('div');
 
 // populates that list with other info from original data (i.e tag & description)
-  const tagline = this.createDetailListItem(beer.tagline);
+  const tagline = this.createDetailListItem('Tagline', beer.tagline);
   tagline.classList.add('tagline');
   detailsList.appendChild(tagline);
 
